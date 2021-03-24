@@ -20,7 +20,7 @@ module.exports = {
 	usage: `${prefix}pokemon <name||number>`,
 	execute(message, args) {
     var found = false;
-    args = args[0][0].toUpperCase() + args[0].slice(1).toLowerCase();
+    args = args[0];
 		for(i=0;i<poke.length;i++){
       if(args == poke[i].no||args==poke[i].name)
       {

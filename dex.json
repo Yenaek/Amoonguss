@@ -779,8 +779,8 @@
     ]
   },
   {
-    "no": 891,
-    "name": "Venusaur-1",
+    "no": 3,
+    "name": "Venusaur-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -1974,8 +1974,8 @@
     ]
   },
   {
-    "no": 892,
-    "name": "Charizard-1",
+    "no": 6,
+    "name": "Charizard-Mega-X",
     "stage": 3,
     "galar_dex": 380,
     "base_stats": [
@@ -2326,8 +2326,8 @@
     ]
   },
   {
-    "no": 893,
-    "name": "Charizard-2",
+    "no": 6,
+    "name": "Charizard-Mega-Y",
     "stage": 3,
     "galar_dex": 380,
     "base_stats": [
@@ -3562,8 +3562,8 @@
     ]
   },
   {
-    "no": 894,
-    "name": "Blastoise-1",
+    "no": 9,
+    "name": "Blastoise-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -4638,8 +4638,8 @@
     ]
   },
   {
-    "no": 895,
-    "name": "Beedrill-1",
+    "no": 15,
+    "name": "Beedrill-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -5271,8 +5271,8 @@
     ]
   },
   {
-    "no": 896,
-    "name": "Pidgeot-1",
+    "no": 18,
+    "name": "Pidgeot-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -5614,8 +5614,8 @@
     ]
   },
   {
-    "no": 897,
-    "name": "Rattata-1",
+    "no": 19,
+    "name": "Rattata-Alolan",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -6054,8 +6054,8 @@
     ]
   },
   {
-    "no": 898,
-    "name": "Raticate-1",
+    "no": 20,
+    "name": "Raticate-Alolan",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -10115,8 +10115,8 @@
     ]
   },
   {
-    "no": 907,
-    "name": "Raichu-1",
+    "no": 26,
+    "name": "Raichu-Alolan",
     "stage": 3,
     "galar_dex": 195,
     "base_stats": [
@@ -10681,8 +10681,8 @@
     ]
   },
   {
-    "no": 908,
-    "name": "Sandshrew-1",
+    "no": 27,
+    "name": "Sandshrew-Alolan",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -11138,8 +11138,8 @@
     ]
   },
   {
-    "no": 909,
-    "name": "Sandslash-1",
+    "no": 28,
+    "name": "Sandslash-Alolan",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -11386,7 +11386,7 @@
   },
   {
     "no": 29,
-    "name": "Nidoran♀",
+    "name": "Nidoran-F",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -12063,7 +12063,7 @@
   },
   {
     "no": 32,
-    "name": "Nidoran♂",
+    "name": "Nidoran-M",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -13882,8 +13882,8 @@
     ]
   },
   {
-    "no": 910,
-    "name": "Vulpix-1",
+    "no": 37,
+    "name": "Vulpix-Alolan",
     "stage": 1,
     "galar_dex": 68,
     "base_stats": [
@@ -14462,8 +14462,8 @@
     ]
   },
   {
-    "no": 911,
-    "name": "Ninetales-1",
+    "no": 38,
+    "name": "Ninetales-Alolan",
     "stage": 2,
     "galar_dex": 69,
     "base_stats": [
@@ -17420,8 +17420,8 @@
     ]
   },
   {
-    "no": 912,
-    "name": "Diglett-1",
+    "no": 50,
+    "name": "Diglett-Alolan",
     "stage": 1,
     "galar_dex": 164,
     "base_stats": [
@@ -17965,8 +17965,8 @@
     ]
   },
   {
-    "no": 913,
-    "name": "Dugtrio-1",
+    "no": 51,
+    "name": "Dugtrio-Alolan",
     "stage": 2,
     "galar_dex": 165,
     "base_stats": [
@@ -18545,8 +18545,8 @@
     ]
   },
   {
-    "no": 914,
-    "name": "Meowth-1",
+    "no": 52,
+    "name": "Meowth-Alolan",
     "stage": 1,
     "galar_dex": 182,
     "base_stats": [
@@ -18833,8 +18833,8 @@
     ]
   },
   {
-    "no": 915,
-    "name": "Meowth-2",
+    "no": 52,
+    "name": "Meowth-Galarian",
     "stage": 1,
     "galar_dex": 182,
     "base_stats": [
@@ -19415,8 +19415,8 @@
     ]
   },
   {
-    "no": 916,
-    "name": "Persian-1",
+    "no": 53,
+    "name": "Persian-Alolan",
     "stage": 2,
     "galar_dex": 184,
     "base_stats": [
@@ -22792,8 +22792,8 @@
     ]
   },
   {
-    "no": 917,
-    "name": "Alakazam-1",
+    "no": 65,
+    "name": "Alakazam-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -25208,8 +25208,8 @@
     ]
   },
   {
-    "no": 918,
-    "name": "Geodude-1",
+    "no": 74,
+    "name": "Geodude-Alolan",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -25642,8 +25642,8 @@
     ]
   },
   {
-    "no": 919,
-    "name": "Graveler-1",
+    "no": 75,
+    "name": "Graveler-Alolan",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -26112,8 +26112,8 @@
     ]
   },
   {
-    "no": 920,
-    "name": "Golem-1",
+    "no": 76,
+    "name": "Golem-Alolan",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -26614,8 +26614,8 @@
     ]
   },
   {
-    "no": 921,
-    "name": "Ponyta-1",
+    "no": 77,
+    "name": "Ponyta-Galarian",
     "stage": 1,
     "galar_dex": 333,
     "base_stats": [
@@ -27127,8 +27127,8 @@
     ]
   },
   {
-    "no": 922,
-    "name": "Rapidash-1",
+    "no": 78,
+    "name": "Rapidash-Galarian",
     "stage": 2,
     "galar_dex": 334,
     "base_stats": [
@@ -27686,8 +27686,8 @@
     ]
   },
   {
-    "no": 923,
-    "name": "Slowpoke-1",
+    "no": 79,
+    "name": "Slowpoke-Galarian",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -28268,8 +28268,8 @@
     ]
   },
   {
-    "no": 924,
-    "name": "Slowbro-1",
+    "no": 80,
+    "name": "Slowbro-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -28955,8 +28955,8 @@
     ]
   },
   {
-    "no": 925,
-    "name": "Farfetch\u2019d-1",
+    "no": 83,
+    "name": "Farfetch\u2019d-Galarian",
     "stage": 2,
     "galar_dex": 218,
     "base_stats": [
@@ -30118,8 +30118,8 @@
     ]
   },
   {
-    "no": 926,
-    "name": "Grimer-1",
+    "no": 88,
+    "name": "Grimer-Alolan",
     "stage": 1,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -30611,8 +30611,8 @@
     ]
   },
   {
-    "no": 927,
-    "name": "Muk-1",
+    "no": 89,
+    "name": "Muk-Alolan",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -32351,8 +32351,8 @@
     ]
   },
   {
-    "no": 928,
-    "name": "Gengar-1",
+    "no": 94,
+    "name": "Gengar-Mega",
     "stage": 3,
     "galar_dex": 143,
     "base_stats": [
@@ -34764,8 +34764,8 @@
     ]
   },
   {
-    "no": 929,
-    "name": "Exeggutor-1",
+    "no": 103,
+    "name": "Exeggutor-Alolan",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -35502,8 +35502,8 @@
     ]
   },
   {
-    "no": 930,
-    "name": "Marowak-1",
+    "no": 105,
+    "name": "Marowak-Alolan",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -37224,8 +37224,8 @@
     ]
   },
   {
-    "no": 931,
-    "name": "Weezing-1",
+    "no": 110,
+    "name": "Weezing-Galarian",
     "stage": 2,
     "galar_dex": 251,
     "base_stats": [
@@ -39020,8 +39020,8 @@
     ]
   },
   {
-    "no": 932,
-    "name": "Kangaskhan-1",
+    "no": 115,
+    "name": "Kangaskhan-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -41023,8 +41023,8 @@
     ]
   },
   {
-    "no": 933,
-    "name": "Mr. Mime-1",
+    "no": 122,
+    "name": "Mr. Mime-Galarian",
     "stage": 2,
     "galar_dex": 365,
     "base_stats": [
@@ -42550,8 +42550,8 @@
     ]
   },
   {
-    "no": 934,
-    "name": "Pinsir-1",
+    "no": 127,
+    "name": "Pinsir-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -43422,8 +43422,8 @@
     ]
   },
   {
-    "no": 935,
-    "name": "Gyarados-1",
+    "no": 130,
+    "name": "Gyarados-Mega",
     "stage": 2,
     "galar_dex": 145,
     "base_stats": [
@@ -46877,8 +46877,8 @@
     ]
   },
   {
-    "no": 937,
-    "name": "Aerodactyl-1",
+    "no": 142,
+    "name": "Aerodactyl-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -49254,8 +49254,8 @@
     ]
   },
   {
-    "no": 938,
-    "name": "Mewtwo-1",
+    "no": 150,
+    "name": "Mewtwo-Mega-X",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -49705,8 +49705,8 @@
     ]
   },
   {
-    "no": 939,
-    "name": "Mewtwo-2",
+    "no": 150,
+    "name": "Mewtwo-Mega-Y",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -57832,8 +57832,8 @@
     ]
   },
   {
-    "no": 940,
-    "name": "Ampharos-1",
+    "no": 181,
+    "name": "Ampharos-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -65577,8 +65577,8 @@
     ]
   },
   {
-    "no": 968,
-    "name": "Steelix-1",
+    "no": 208,
+    "name": "Steelix-Mega",
     "stage": 2,
     "galar_dex": 179,
     "base_stats": [
@@ -67068,8 +67068,8 @@
     ]
   },
   {
-    "no": 969,
-    "name": "Scizor-1",
+    "no": 212,
+    "name": "Scizor-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -67782,8 +67782,8 @@
     ]
   },
   {
-    "no": 970,
-    "name": "Heracross-1",
+    "no": 214,
+    "name": "Heracross-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -70010,8 +70010,8 @@
     ]
   },
   {
-    "no": 971,
-    "name": "Corsola-1",
+    "no": 222,
+    "name": "Corsola-Galarian",
     "stage": 2,
     "galar_dex": 236,
     "base_stats": [
@@ -72031,8 +72031,8 @@
     ]
   },
   {
-    "no": 972,
-    "name": "Houndoom-1",
+    "no": 229,
+    "name": "Houndoom-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -76643,8 +76643,8 @@
     ]
   },
   {
-    "no": 973,
-    "name": "Tyranitar-1",
+    "no": 248,
+    "name": "Tyranitar-Mega",
     "stage": 3,
     "galar_dex": 385,
     "base_stats": [
@@ -78657,8 +78657,8 @@
     ]
   },
   {
-    "no": 974,
-    "name": "Sceptile-1",
+    "no": 254,
+    "name": "Sceptile-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -79609,8 +79609,8 @@
     ]
   },
   {
-    "no": 975,
-    "name": "Blaziken-1",
+    "no": 257,
+    "name": "Blaziken-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -80547,8 +80547,8 @@
     ]
   },
   {
-    "no": 976,
-    "name": "Swampert-1",
+    "no": 260,
+    "name": "Swampert-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -81473,8 +81473,8 @@
     ]
   },
   {
-    "no": 977,
-    "name": "Zigzagoon-1",
+    "no": 263,
+    "name": "Zigzagoon-Galarian",
     "stage": 1,
     "galar_dex": 31,
     "base_stats": [
@@ -82077,8 +82077,8 @@
     ]
   },
   {
-    "no": 978,
-    "name": "Linoone-1",
+    "no": 264,
+    "name": "Linoone-Galarian",
     "stage": 2,
     "galar_dex": 32,
     "base_stats": [
@@ -86664,8 +86664,8 @@
     ]
   },
   {
-    "no": 979,
-    "name": "Gardevoir-1",
+    "no": 282,
+    "name": "Gardevoir-Mega",
     "stage": 3,
     "galar_dex": 122,
     "base_stats": [
@@ -91548,8 +91548,8 @@
     ]
   },
   {
-    "no": 980,
-    "name": "Sableye-1",
+    "no": 302,
+    "name": "Sableye-Mega",
     "stage": 2,
     "galar_dex": 294,
     "base_stats": [
@@ -92249,8 +92249,8 @@
     ]
   },
   {
-    "no": 981,
-    "name": "Mawile-1",
+    "no": 303,
+    "name": "Mawile-Mega",
     "stage": 2,
     "galar_dex": 295,
     "base_stats": [
@@ -93328,8 +93328,8 @@
     ]
   },
   {
-    "no": 982,
-    "name": "Aggron-1",
+    "no": 306,
+    "name": "Aggron-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -94174,8 +94174,8 @@
     ]
   },
   {
-    "no": 983,
-    "name": "Medicham-1",
+    "no": 308,
+    "name": "Medicham-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -94931,8 +94931,8 @@
     ]
   },
   {
-    "no": 984,
-    "name": "Manectric-1",
+    "no": 310,
+    "name": "Manectric-Mega",
     "stage": 2,
     "galar_dex": 67,
     "base_stats": [
@@ -97142,8 +97142,8 @@
     ]
   },
   {
-    "no": 985,
-    "name": "Sharpedo-1",
+    "no": 319,
+    "name": "Sharpedo-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -98315,8 +98315,8 @@
     ]
   },
   {
-    "no": 986,
-    "name": "Camerupt-1",
+    "no": 323,
+    "name": "Camerupt-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -101227,8 +101227,8 @@
     ]
   },
   {
-    "no": 987,
-    "name": "Altaria-1",
+    "no": 334,
+    "name": "Altaria-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -105848,8 +105848,8 @@
     ]
   },
   {
-    "no": 988,
-    "name": "Castform-1",
+    "no": 351,
+    "name": "Castform-Sunny",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -106063,8 +106063,8 @@
     ]
   },
   {
-    "no": 989,
-    "name": "Castform-2",
+    "no": 351,
+    "name": "Castform-Rainy",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -106278,8 +106278,8 @@
     ]
   },
   {
-    "no": 990,
-    "name": "Castform-3",
+    "no": 351,
+    "name": "Castform-Snowy",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -107182,8 +107182,8 @@
     ]
   },
   {
-    "no": 991,
-    "name": "Banette-1",
+    "no": 354,
+    "name": "Banette-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -108681,8 +108681,8 @@
     ]
   },
   {
-    "no": 992,
-    "name": "Absol-1",
+    "no": 359,
+    "name": "Absol-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -109558,8 +109558,8 @@
     ]
   },
   {
-    "no": 993,
-    "name": "Glalie-1",
+    "no": 362,
+    "name": "Glalie-Mega",
     "stage": 2,
     "galar_dex": 80,
     "base_stats": [
@@ -111901,8 +111901,8 @@
     ]
   },
   {
-    "no": 994,
-    "name": "Salamence-1",
+    "no": 373,
+    "name": "Salamence-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -112674,8 +112674,8 @@
     ]
   },
   {
-    "no": 995,
-    "name": "Metagross-1",
+    "no": 376,
+    "name": "Metagross-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -113842,8 +113842,8 @@
     ]
   },
   {
-    "no": 996,
-    "name": "Latias-1",
+    "no": 380,
+    "name": "Latias-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -114382,8 +114382,8 @@
     ]
   },
   {
-    "no": 997,
-    "name": "Latios-1",
+    "no": 381,
+    "name": "Latios-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -114841,8 +114841,8 @@
     ]
   },
   {
-    "no": 998,
-    "name": "Kyogre-1",
+    "no": 382,
+    "name": "Kyogre-Primal",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -115295,8 +115295,8 @@
     ]
   },
   {
-    "no": 999,
-    "name": "Groudon-1",
+    "no": 383,
+    "name": "Groudon-Primal",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -115819,8 +115819,8 @@
     ]
   },
   {
-    "no": 1000,
-    "name": "Rayquaza-1",
+    "no": 384,
+    "name": "Rayquaza-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -116462,7 +116462,7 @@
   },
   {
     "no": 386,
-    "name": "Deoxys",
+    "name": "Deoxys-Normal",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -116766,8 +116766,8 @@
     ]
   },
   {
-    "no": 1001,
-    "name": "Deoxys-1",
+    "no": 386,
+    "name": "Deoxys-Attack",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -117071,8 +117071,8 @@
     ]
   },
   {
-    "no": 1002,
-    "name": "Deoxys-2",
+    "no": 386,
+    "name": "Deoxys-Defense",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -117376,8 +117376,8 @@
     ]
   },
   {
-    "no": 1003,
-    "name": "Deoxys-3",
+    "no": 386,
+    "name": "Deoxys-Speed",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -127649,8 +127649,8 @@
     ]
   },
   {
-    "no": 1013,
-    "name": "Lopunny-1",
+    "no": 428,
+    "name": "Lopunny-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -131706,8 +131706,8 @@
     ]
   },
   {
-    "no": 1014,
-    "name": "Garchomp-1",
+    "no": 445,
+    "name": "Garchomp-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -132998,8 +132998,8 @@
     ]
   },
   {
-    "no": 1015,
-    "name": "Lucario-1",
+    "no": 448,
+    "name": "Lucario-Mega",
     "stage": 2,
     "galar_dex": 299,
     "base_stats": [
@@ -136521,8 +136521,8 @@
     ]
   },
   {
-    "no": 1016,
-    "name": "Abomasnow-1",
+    "no": 460,
+    "name": "Abomasnow-Mega",
     "stage": 2,
     "galar_dex": 97,
     "base_stats": [
@@ -141213,8 +141213,8 @@
     ]
   },
   {
-    "no": 1017,
-    "name": "Gallade-1",
+    "no": 475,
+    "name": "Gallade-Mega",
     "stage": 3,
     "galar_dex": 123,
     "base_stats": [
@@ -142837,8 +142837,8 @@
     ]
   },
   {
-    "no": 1018,
-    "name": "Rotom-1",
+    "no": 479,
+    "name": "Rotom-Heat",
     "stage": 2,
     "galar_dex": 372,
     "base_stats": [
@@ -143076,8 +143076,8 @@
     ]
   },
   {
-    "no": 1019,
-    "name": "Rotom-2",
+    "no": 479,
+    "name": "Rotom-Wash",
     "stage": 2,
     "galar_dex": 372,
     "base_stats": [
@@ -143315,8 +143315,8 @@
     ]
   },
   {
-    "no": 1020,
-    "name": "Rotom-3",
+    "no": 479,
+    "name": "Rotom-Frost",
     "stage": 2,
     "galar_dex": 372,
     "base_stats": [
@@ -143554,8 +143554,8 @@
     ]
   },
   {
-    "no": 1021,
-    "name": "Rotom-4",
+    "no": 479,
+    "name": "Rotom-Fan",
     "stage": 2,
     "galar_dex": 372,
     "base_stats": [
@@ -143793,8 +143793,8 @@
     ]
   },
   {
-    "no": 1022,
-    "name": "Rotom-5",
+    "no": 479,
+    "name": "Rotom-Mow",
     "stage": 2,
     "galar_dex": 372,
     "base_stats": [
@@ -146080,8 +146080,8 @@
     ]
   },
   {
-    "no": 1023,
-    "name": "Giratina-1",
+    "no": 487,
+    "name": "Giratina-Origin",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -147121,7 +147121,7 @@
   },
   {
     "no": 492,
-    "name": "Shaymin",
+    "name": "Shaymin-Land",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -147286,8 +147286,8 @@
     ]
   },
   {
-    "no": 1024,
-    "name": "Shaymin-1",
+    "no": 492,
+    "name": "Shaymin-Sky",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -162281,8 +162281,8 @@
     ]
   },
   {
-    "no": 1042,
-    "name": "Audino-1",
+    "no": 531,
+    "name": "Audino-Mega",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -168334,8 +168334,8 @@
     ]
   },
   {
-    "no": 1044,
-    "name": "Darumaka-1",
+    "no": 554,
+    "name": "Darumaka-Galarian",
     "stage": 1,
     "galar_dex": 367,
     "base_stats": [
@@ -168969,8 +168969,8 @@
     ]
   },
   {
-    "no": 1045,
-    "name": "Darmanitan-1",
+    "no": 555,
+    "name": "Darmanitan-Zen",
     "stage": 2,
     "galar_dex": 368,
     "base_stats": [
@@ -169312,8 +169312,8 @@
     ]
   },
   {
-    "no": 1046,
-    "name": "Darmanitan-2",
+    "no": 555,
+    "name": "Darmanitan-Galarian",
     "stage": 2,
     "galar_dex": 368,
     "base_stats": [
@@ -169654,8 +169654,8 @@
     ]
   },
   {
-    "no": 1047,
-    "name": "Darmanitan-3",
+    "no": 555,
+    "name": "Darmanitan-Galarian-Zen",
     "stage": 2,
     "galar_dex": 368,
     "base_stats": [
@@ -172012,8 +172012,8 @@
     ]
   },
   {
-    "no": 1048,
-    "name": "Yamask-1",
+    "no": 562,
+    "name": "Yamask-Galarian",
     "stage": 1,
     "galar_dex": 327,
     "base_stats": [
@@ -186552,8 +186552,8 @@
     ]
   },
   {
-    "no": 1055,
-    "name": "Stunfisk-1",
+    "no": 618,
+    "name": "Stunfisk-Galarian",
     "stage": 2,
     "galar_dex": 226,
     "base_stats": [
@@ -192918,8 +192918,8 @@
     ]
   },
   {
-    "no": 1056,
-    "name": "Tornadus-1",
+    "no": 641,
+    "name": "Tornadus-Therian",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -193393,8 +193393,8 @@
     ]
   },
   {
-    "no": 1057,
-    "name": "Thundurus-1",
+    "no": 642,
+    "name": "Thundurus-Thereian",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -194491,8 +194491,8 @@
     ]
   },
   {
-    "no": 1058,
-    "name": "Landorus-1",
+    "no": 645,
+    "name": "Landorus-Therian",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -195020,8 +195020,8 @@
     ]
   },
   {
-    "no": 1059,
-    "name": "Kyurem-1",
+    "no": 646,
+    "name": "Kyurem-White",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -195323,8 +195323,8 @@
     ]
   },
   {
-    "no": 1060,
-    "name": "Kyurem-2",
+    "no": 646,
+    "name": "Kyurem-Black",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -196471,8 +196471,8 @@
     ]
   },
   {
-    "no": 1062,
-    "name": "Meloetta-1",
+    "no": 648,
+    "name": "Meloetta-Pirouette",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -199942,8 +199942,8 @@
     ]
   },
   {
-    "no": 1068,
-    "name": "Greninja-2",
+    "no": 658,
+    "name": "Greninja-Ash",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -213690,8 +213690,8 @@
     ]
   },
   {
-    "no": 1149,
-    "name": "Aegislash-1",
+    "no": 681,
+    "name": "Aegislash-Blade",
     "stage": 3,
     "galar_dex": 332,
     "base_stats": [
@@ -224821,7 +224821,7 @@
   },
   {
     "no": 718,
-    "name": "Zygarde",
+    "name": "Zygarde-50",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -225026,8 +225026,8 @@
     ]
   },
   {
-    "no": 1157,
-    "name": "Zygarde-1",
+    "no": 718,
+    "name": "Zygarde-10",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -225232,8 +225232,8 @@
     ]
   },
   {
-    "no": 1158,
-    "name": "Zygarde-2",
+    "no": 718,
+    "name": "Zygarde-10-2",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -225438,8 +225438,8 @@
     ]
   },
   {
-    "no": 1159,
-    "name": "Zygarde-3",
+    "no": 718,
+    "name": "Zygarde-50-2",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -225644,8 +225644,8 @@
     ]
   },
   {
-    "no": 1160,
-    "name": "Zygarde-4",
+    "no": 718,
+    "name": "Zygarde-Complete",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -226084,8 +226084,8 @@
     ]
   },
   {
-    "no": 1161,
-    "name": "Diancie-1",
+    "no": 719,
+    "name": "Diancie-Mega",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -226500,8 +226500,8 @@
     ]
   },
   {
-    "no": 1162,
-    "name": "Hoopa-1",
+    "no": 720,
+    "name": "Hoopa-Unbound",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -231350,7 +231350,7 @@
   },
   {
     "no": 741,
-    "name": "Oricorio",
+    "name": "Oricorio-Baille",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -231512,8 +231512,8 @@
     ]
   },
   {
-    "no": 1163,
-    "name": "Oricorio-1",
+    "no": 741,
+    "name": "Oricorio-Pom-Pom",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -231675,8 +231675,8 @@
     ]
   },
   {
-    "no": 1164,
-    "name": "Oricorio-2",
+    "no": 741,
+    "name": "Oricorio-Pau",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -231838,8 +231838,8 @@
     ]
   },
   {
-    "no": 1165,
-    "name": "Oricorio-3",
+    "no": 741,
+    "name": "Oricorio-Sensu",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -232872,7 +232872,7 @@
   },
   {
     "no": 745,
-    "name": "Lycanroc",
+    "name": "Lycanroc-Midday",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -233080,8 +233080,8 @@
     ]
   },
   {
-    "no": 1167,
-    "name": "Lycanroc-1",
+    "no": 745,
+    "name": "Lycanroc-Midnight",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -233317,8 +233317,8 @@
     ]
   },
   {
-    "no": 1168,
-    "name": "Lycanroc-2",
+    "no": 745,
+    "name": "Lycanroc-Dusk",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -233752,8 +233752,8 @@
     ]
   },
   {
-    "no": 1169,
-    "name": "Wishiwashi-1",
+    "no": 746,
+    "name": "Wishiwashi-School",
     "stage": 2,
     "galar_dex": 155,
     "base_stats": [
@@ -246654,8 +246654,8 @@
     ]
   },
   {
-    "no": 1187,
-    "name": "Minior-1",
+    "no": 774,
+    "name": "Minior-Meteor",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -247800,8 +247800,8 @@
     ]
   },
   {
-    "no": 1193,
-    "name": "Minior-7",
+    "no": 774,
+    "name": "Minior-Core",
     "stage": 2,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -255651,8 +255651,8 @@
     ]
   },
   {
-    "no": 1201,
-    "name": "Necrozma-1",
+    "no": 800,
+    "name": "Necrozma-Dusk-Mane",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -255986,8 +255986,8 @@
     ]
   },
   {
-    "no": 1202,
-    "name": "Necrozma-2",
+    "no": 800,
+    "name": "Necrozma-Dawn-Wings",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -256321,8 +256321,8 @@
     ]
   },
   {
-    "no": 1203,
-    "name": "Necrozma-3",
+    "no": 800,
+    "name": "Necrozma-Ultra",
     "stage": 3,
     "galar_dex": "Foreign",
     "base_stats": [
@@ -278230,8 +278230,8 @@
     ]
   },
   {
-    "no": 1218,
-    "name": "Eiscue-1",
+    "no": 875,
+    "name": "Eiscue-Noice",
     "stage": 2,
     "galar_dex": 370,
     "base_stats": [
@@ -278461,7 +278461,7 @@
   },
   {
     "no": 876,
-    "name": "Indeedee",
+    "name": "Indeedee-Male",
     "stage": 2,
     "galar_dex": 337,
     "base_stats": [
@@ -278719,8 +278719,8 @@
     ]
   },
   {
-    "no": 1219,
-    "name": "Indeedee-1",
+    "no": 876,
+    "name": "Indeedee-Female",
     "stage": 2,
     "galar_dex": 337,
     "base_stats": [
@@ -279264,8 +279264,8 @@
     ]
   },
   {
-    "no": 1220,
-    "name": "Morpeko-1",
+    "no": 877,
+    "name": "Morpeko-Hangry",
     "stage": 2,
     "galar_dex": 344,
     "base_stats": [
@@ -282458,8 +282458,8 @@
     ]
   },
   {
-    "no": 1221,
-    "name": "Zacian-1",
+    "no": 888,
+    "name": "Zacian-Crowned",
     "stage": 3,
     "galar_dex": 398,
     "base_stats": [
@@ -283023,8 +283023,8 @@
     ]
   },
   {
-    "no": 1222,
-    "name": "Zamazenta-1",
+    "no": 889,
+    "name": "Zamazenta-Crowned",
     "stage": 3,
     "galar_dex": 399,
     "base_stats": [
@@ -283557,8 +283557,8 @@
     ]
   },
   {
-    "no": 1223,
-    "name": "Eternatus-1",
+    "no": 890,
+    "name": "Eternatus-Eternamax",
     "stage": 3,
     "galar_dex": 400,
     "base_stats": [
