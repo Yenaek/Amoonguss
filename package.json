@@ -1,0 +1,15 @@
+{
+  "name": "amoonguss",
+  "version": "0.0.1",
+  "description": "sus bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yenaek",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
