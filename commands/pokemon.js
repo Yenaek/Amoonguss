@@ -1,113 +1,135 @@
-const poke = require('../dex.json')
-const { prefix } = require('../config.json');
 var embedColours = {
-    Red: 16724530,
-    Blue: 2456831,
-    Yellow: 16773977,
-    Green: 4128590,
-    Black: 3289650,
-    Brown: 10702874,
-    Purple: 10894824,
-    Gray: 9868950,
-    White: 14803425,
-    Pink: 16737701
-};
-module.exports = {
-	name: 'pokemon',
-	args: true,
-	description: 'Displays a pokemons information',
-  aliases: ['p','poke','pokedex'],
-	usage: `${prefix}pokemon <name||number>`,
-	execute(message, args) {
-    var found = false;
-    args = args[0];
-		for(i=0;i<poke.length;i++){
-      if(args == poke[i].no||args==poke[i].name)
-      {
-        found = true;
-        var stat = poke[i].base_stats;
-        var pokeStats = stat[0] + '/' + stat[1] + '/' + stat[2] + '/' + stat[3] + '/' + stat[4] + '/' + stat[5];
-        var ability = poke[i].abilities;
-        var type = poke[i].types;
+    red: 16724530,
+    blue: 2456831,
+    yellow: 16773977,
+    green: 4128590,
+    black: 3289650,
+    brown: 10702874,
+    purple: 10894824,
+    gray: 9868950,
+    white: 14803425,
+    pink: 16737701
+  }
+    var Pokedex = require('pokedex-promise-v2');
+    var P = new Pokedex();
+    module.exports = {
+    	name: 'pokemon',
+    	args: true,
+    	description: 'Displays a Pokemons information',
+      aliases: ['p','pokedex','dex'],
+    	usage: `<name>`,
+    	execute(message, args) {
+        var pok = args.join('-');
+        pok = pok.toLowerCase();
+            P.getPokemonByName(pok)
+          .then(function(poke) {
+            pokeURL='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + poke.id + '.png';
+            var color = 'black';
+            var pokeName = '1';
+            P.getPokemonSpeciesByName(args[0].toLowerCase())
+            .then(function(spec) {
+              color = spec.color.name;
+              for(j=0;j<spec.names.length;j++)
+              {
+                if(spec.names[j].language.name == 'en')
+                {
+                  pokeName = spec.names[j].name
+                }
+              }
+              pokeStats = '';
+              for(i=0;i<poke.stats.length;i++)
+              {
+                if(i==0)
+                {
+                  pokeStats += poke.stats[i].base_stat
+                }
+                else {
+                  pokeStats = pokeStats + ' | ' +poke.stats[i].base_stat
+                }
+              }
+              pokeType = '';
+              for(i=0;i<poke.types.length;i++)
+              {
+                if(i==0)
+                {
+                  pokeType += poke.types[i].type.name[0].toUpperCase() +　poke.types[i].type.name.slice(1);
+                }
+                else {
+                  pokeType = pokeType + ' | ' + poke.types[i].type.name[0].toUpperCase() +　poke.types[i].type.name.slice(1);
+                }
+              }
+              pokeAbilities = '';
+              switch(poke.abilities.length)
+              {
+                case 1:
+                  pokeAbilities = poke.abilities[0].ability.name[0].toUpperCase() + poke.abilities[0].ability.name.slice(1);
+                  break;
+                case 2:
+                  pokeAbilities = poke.abilities[0].ability.name[0].toUpperCase() + poke.abilities[0].ability.name.slice(1);
+                  pokeAbilities += ' | *' + poke.abilities[1].ability.name[0].toUpperCase() + poke.abilities[1].ability.name.slice(1) + '*';
+                  break;
+                case 3:
+                  pokeAbilities = poke.abilities[0].ability.name[0].toUpperCase() + poke.abilities[0].ability.name.slice(1);
+                  pokeAbilities += ' | ' + poke.abilities[1].ability.name[0].toUpperCase() + poke.abilities[1].ability.name.slice(1);
+                  pokeAbilities += ' | *' + poke.abilities[2].ability.name[0].toUpperCase() + poke.abilities[2].ability.name.slice(1) + '*';
+                  break;
+              }
+            var pokeEmbed =
+            {
+              color:　embedColours[color],
+              thumbnail:
+              {
+                url:pokeURL,
+              },
+              fields:
+              [
+                {
+                  name: 'ID',
+                  value: poke.id,
+                  inline: true
+                },
+                {
+                  name: 'Name',
+                  value: pokeName,
+                  inline: true
+                },
+                {
+                  name: 'Type',
+                  value: pokeType,
+                  inline: false
+                },
+                {
+                  name: 'Base Stats',
+                  value: pokeStats,
+                  inline:false
+                },
+                {
+                  name: 'Abilities',
+                  value: pokeAbilities,
+                  inline:false
+                },
+                {
+                  name: 'Height',
+                  value: poke.height/10 + 'm',
+                  inline:true
+                },
+                {
+                  name: 'Weight',
+                  value: poke.weight/10 + 'kg',
+                  inline:true
+                }
+              ],
+            }
+            return message.channel.send('',{embed: pokeEmbed});
+          })
+          .catch(function(error) {
+            console.log('There was an ERROR: ', error);
+          });
+        })
 
-        var pokeAbilities = '';
-        if(ability[0] == ability[1] && ability[0] == ability[2])
-        {
-          pokeAbilities = ability[0];
-        }
-        else if (ability[0] == ability[1])
-        {
-          pokeAbilities = ability[0] + ', ' + '*' + ability[2] + '*';
-        }
-        else
-        {
-          pokeAbilities = ability[0] + ', ' + ability[1] + ', ' + '*' + ability[2] + '*';
-        }
-
-        var pokeType = '';
-        if(!type[1])
-        {
-          pokeType = type[0];
-        }
-        else
-        {
-          pokeType = type[0] + '/' + type[1];
-        }
-
-        var pokeURL = 'https://img.pokemondb.net/sprites/home/normal/'+poke[i].name.toLowerCase()+'.png'
-
-        var pokeEmbed =
-        {
-          color: embedColours[poke[i].color],
-          thumbnail:
-          {
-            url:pokeURL,
-          },
-          fields:
-          [
-            {
-              name: 'ID',
-              value: poke[i].no,
-              inline: true
-            },
-            {
-              name: 'Name',
-              value: poke[i].name,
-              inline: true
-            },
-            {
-              name: 'Type',
-              value: pokeType,
-              inline:false
-            },
-            {
-              name: 'Base Stats',
-              value: pokeStats,
-              inline: false
-            },
-            {
-              name: 'Abilities',
-              value: pokeAbilities,
-              inline:false
-            },
-            {
-              name: 'Weight',
-              value: poke[i].weight + 'kg',
-              inline:true
-            },
-            {
-              name: 'Height',
-              value: poke[i].height + 'm',
-              inline:true
-            },
-          ],
-        }
-        return message.channel.send('',{embed: pokeEmbed});
-      }
-    }
-    if(!found)
-    {
-      return message.channel.send('Couldn\'t find Pokemon.');
-    }
-	},
-};
+          .catch(function(error) {
+            console.log('There was an ERROR: ', error);
+            return message.channel.send('Pokemon not found.');
+          });
+    	},
+    };
