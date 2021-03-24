@@ -90,6 +90,16 @@ module.exports = {
               value: pokeAbilities,
               inline:false
             },
+            {
+              name: 'Weight',
+              value: poke[i].weight + 'kg',
+              inline:true
+            },
+            {
+              name: 'Height',
+              value: poke[i].height + 'm',
+              inline:true
+            },
           ],
         }
         return message.channel.send('',{embed: pokeEmbed});
