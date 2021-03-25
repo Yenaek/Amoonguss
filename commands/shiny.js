@@ -14,7 +14,7 @@ module.exports = {
           pokeURL='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + poke.id + '.png';
           var pokeEmbed =
           {
-            thumbnail:
+            image:
             {
               url:pokeURL,
             },

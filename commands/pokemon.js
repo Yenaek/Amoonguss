@@ -25,7 +25,7 @@ var embedColours = {
           .then(function(poke) {
             pokeURL='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + poke.id + '.png';
             var color = 'black';
-            var pokeName = '1';
+            var pokeName = '';
             P.getPokemonSpeciesByName(args[0].toLowerCase())
             .then(function(spec) {
               color = spec.color.name;
