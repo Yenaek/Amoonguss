@@ -2,24 +2,24 @@ var moveEmbed;
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var typeURL = {
-    normal:'https://cdn.bulbagarden.net/upload/9/95/Normal_icon_SwSh.png',
-    fighting:'https://cdn.bulbagarden.net/upload/3/3b/Fighting_icon_SwSh.png',
-    flying:'https://cdn.bulbagarden.net/upload/b/b5/Flying_icon_SwSh.png',
-    poison:'https://cdn.bulbagarden.net/upload/b/b5/Flying_icon_SwSh.png',
-    ground:'https://cdn.bulbagarden.net/upload/2/27/Ground_icon_SwSh.png',
-    rock:'https://cdn.bulbagarden.net/upload/1/11/Rock_icon_SwSh.png',
-    bug:'https://cdn.bulbagarden.net/upload/9/9c/Bug_icon_SwSh.png',
-    ghost:'https://cdn.bulbagarden.net/upload/0/01/Ghost_icon_SwSh.png',
-    steel:'https://cdn.bulbagarden.net/upload/0/09/Steel_icon_SwSh.png',
-    fire:'https://cdn.bulbagarden.net/upload/a/ab/Fire_icon_SwSh.png',
-    water:'https://cdn.bulbagarden.net/upload/8/80/Water_icon_SwSh.png',
-    grass:'https://cdn.bulbagarden.net/upload/a/a8/Grass_icon_SwSh.png',
-    electric:'https://cdn.bulbagarden.net/upload/7/7b/Electric_icon_SwSh.png',
-    psychic:'https://cdn.bulbagarden.net/upload/7/73/Psychic_icon_SwSh.png',
-    ice:'https://cdn.bulbagarden.net/upload/1/15/Ice_icon_SwSh.png',
-    dragon:'https://cdn.bulbagarden.net/upload/7/70/Dragon_icon_SwSh.png',
-    dark:'https://cdn.bulbagarden.net/upload/d/d5/Dark_icon_SwSh.png',
-    fairy:'https://cdn.bulbagarden.net/upload/c/c6/Fairy_icon_SwSh.png'
+    normal:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Pokémon_Normal_Type_Icon.svg/200px-Pokémon_Normal_Type_Icon.svg.png',
+    fighting:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Pokémon_Fighting_Type_Icon.svg/200px-Pokémon_Fighting_Type_Icon.svg.png',
+    flying:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pokémon_Flying_Type_Icon.svg/200px-Pokémon_Flying_Type_Icon.svg.png',
+    poison:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Pokémon_Poison_Type_Icon.svg/200px-Pokémon_Poison_Type_Icon.svg.png',
+    ground:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Pokémon_Ground_Type_Icon.svg/200px-Pokémon_Ground_Type_Icon.svg.png',
+    rock:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Pokémon_Rock_Type_Icon.svg/200px-Pokémon_Rock_Type_Icon.svg.png',
+    bug:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pokémon_Bug_Type_Icon.svg/200px-Pokémon_Bug_Type_Icon.svg.png',
+    ghost:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pokémon_Ghost_Type_Icon.svg/200px-Pokémon_Ghost_Type_Icon.svg.png',
+    steel:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Pokémon_Steel_Type_Icon.svg/200px-Pokémon_Steel_Type_Icon.svg.png',
+    fire:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Pokémon_Fire_Type_Icon.svg/200px-Pokémon_Fire_Type_Icon.svg.png',
+    water:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pokémon_Water_Type_Icon.svg/200px-Pokémon_Water_Type_Icon.svg.png',
+    grass:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pokémon_Grass_Type_Icon.svg/200px-Pokémon_Grass_Type_Icon.svg.png',
+    electric:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pokémon_Electric_Type_Icon.svg/200px-Pokémon_Electric_Type_Icon.svg.png',
+    psychic:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Pokémon_Psychic_Type_Icon.svg/200px-Pokémon_Psychic_Type_Icon.svg.png',
+    ice:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Pokémon_Ice_Type_Icon.svg/200px-Pokémon_Ice_Type_Icon.svg.png',
+    dragon:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Pokémon_Dragon_Type_Icon.svg/200px-Pokémon_Dragon_Type_Icon.svg.png',
+    dark:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Pokémon_Dark_Type_Icon.svg/200px-Pokémon_Dark_Type_Icon.svg.png',
+    fairy:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Pokémon_Fairy_Type_Icon.svg/200px-Pokémon_Fairy_Type_Icon.svg.png'
 };
 var embedColours = {
   normal:0xffffff,

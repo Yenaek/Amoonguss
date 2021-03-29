@@ -10,6 +10,16 @@ var embedColours = {
     white: 14803425,
     pink: 16737701
   }
+  function makeReadable(msg)
+  {
+    msg = msg.split('-');
+    for(i=0;i<msg.length;i++)
+    {
+      msg[i] = msg[i][0].toUpperCase() + msg[i].slice(1).toLowerCase();
+    }
+    msg = msg.join(' ');
+    return msg;
+  }
     var Pokedex = require('pokedex-promise-v2');
     var P = new Pokedex();
     module.exports = {
@@ -62,16 +72,16 @@ var embedColours = {
               switch(poke.abilities.length)
               {
                 case 1:
-                  pokeAbilities = poke.abilities[0].ability.name[0].toUpperCase() + poke.abilities[0].ability.name.slice(1);
+                  pokeAbilities = makeReadable(poke.abilities[0].ability.name);
                   break;
                 case 2:
-                  pokeAbilities = poke.abilities[0].ability.name[0].toUpperCase() + poke.abilities[0].ability.name.slice(1);
-                  pokeAbilities += ' | *' + poke.abilities[1].ability.name[0].toUpperCase() + poke.abilities[1].ability.name.slice(1) + '*';
+                  pokeAbilities = makeReadable(poke.abilities[0].ability.name);
+                  pokeAbilities += ' | *' + makeReadable(poke.abilities[1].ability.name) + '*';
                   break;
                 case 3:
-                  pokeAbilities = poke.abilities[0].ability.name[0].toUpperCase() + poke.abilities[0].ability.name.slice(1);
-                  pokeAbilities += ' | ' + poke.abilities[1].ability.name[0].toUpperCase() + poke.abilities[1].ability.name.slice(1);
-                  pokeAbilities += ' | *' + poke.abilities[2].ability.name[0].toUpperCase() + poke.abilities[2].ability.name.slice(1) + '*';
+                  pokeAbilities = makeReadable(poke.abilities[0].ability.name);
+                  pokeAbilities += ' | ' + makeReadable(poke.abilities[1].ability.name);
+                  pokeAbilities += ' | *' + makeReadable(poke.abilities[2].ability.name) + '*';
                   break;
               }
             var pokeEmbed =

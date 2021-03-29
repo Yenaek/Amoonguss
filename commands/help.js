@@ -3,7 +3,7 @@ module.exports = {
 	name: 'help',
 	description: 'Gives information about commands',
   args: false,
-	aliases: ['commands','info'],
+	aliases: ['commands','info','h'],
 	usage: `${prefix}help <command name>`,
 	execute(message, args) {
     const data = [];
