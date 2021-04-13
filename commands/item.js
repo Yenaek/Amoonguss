@@ -1,5 +1,15 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
+function getEnName(nameArray, getName)
+{
+  for(i=0;i<nameArray.length;i++)
+  {
+    if(nameArray[i].language.name == 'en')
+    {
+      return nameArray[i][getName]
+    }
+  }
+}
 module.exports = {
 	name: 'item',
 	args: true,
@@ -14,14 +24,7 @@ module.exports = {
     .then(function(item)
     {
       const itemURL = 'https://img.pokemondb.net/sprites/items/' + args + '.png';
-      itemName = '';
-      for(j=0;j<item.names.length;j++)
-      {
-        if(item.names[j].language.name == 'en')
-        {
-          itemName = item.names[j].name;
-        }
-      }
+      itemName = getEnName(item.names, 'name');
       itemCost = item.cost;
       if(item.cost == 0)
       {
@@ -30,14 +33,7 @@ module.exports = {
       else {
         itemCost = '₽' + itemCost;
       }
-      itemEff = '';
-      for(j=0;j<item.effect_entries.length;j++)
-      {
-        if(item.effect_entries[j].language.name == 'en')
-        {
-          itemEff = item.effect_entries[j].short_effect;
-        }
-      }
+      itemEff = getEnName(item.effect_entries, 'short_effect');
       itemEmbed =
       {
         thumbnail:

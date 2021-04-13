@@ -1,5 +1,15 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
+function getEnName(nameArray, getName)
+{
+  for(i=0;i<nameArray.length;i++)
+  {
+    if(nameArray[i].language.name == 'en')
+    {
+      return nameArray[i][getName]
+    }
+  }
+}
 function makeReadable(msg)
 {
   msg = msg.split('-');
@@ -21,22 +31,8 @@ module.exports = {
 		ab = ab.toLowerCase();
 		P.getAbilityByName(ab)
 	 .then(function(abil) {
-		 abName = '';
-		 for(j=0;j<abil.names.length;j++)
-		 {
-			 if(abil.names[j].language.name == 'en')
-			 {
-				 abName = abil.names[j].name
-			 }
-		 }
-		 abEff = '';
-		 for(j=0;j<abil.effect_entries.length;j++)
-		 {
-			 if(abil.effect_entries[j].language.name == 'en')
-			 {
-				 abEff = abil.effect_entries[j].effect
-			 }
-		 }
+		 abName = getEnName(abil.names, 'name');
+		 abEff = getEnName(abil.effect_entries, 'effect');
 		 abPoke = '';
 		 var i = 0;
 		 while(i<abil.pokemon.length)

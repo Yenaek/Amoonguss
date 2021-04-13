@@ -1,6 +1,5 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
-berries = ['Aguav','Apicot','Aspear','Babiri','Charti','Cheri','Chesto','Chilan','Chople','Coba','Colbur','Custap','Enigma','Figy','Ganlon','Grepa','Haban','Hondew','Iapapa','Jaboca','Kasib','Kebia','Kee','Kelpsy','Lansat','Leppa','Liechi','Lum','Mago','Maranga','Micle','Occa','Oran','Passho','Payapa','Pecha','Persim','Petaya','Pomeg','Qualot','Rawst','Rindo','Roseli','Rowap','Salac','Shuca','Sitrus','Starf','Tamato','Tanga','Wacan','Wiki','Yache'];
 function makeReadable(msg)
 {
   msg = msg.split('-');
@@ -11,6 +10,31 @@ function makeReadable(msg)
   msg = msg.join(' ');
   return msg;
 }
+function makeList(array, variable)
+{
+  res = '';
+  for(i = 0;i<array.length;i++)
+  {
+    str = '';
+    if (typeof array[i][variable] === 'string' || array[i][variable] instanceof String)
+    {
+      str = array[i][variable][0].toUpperCase() + array[i][variable].slice(1).toLowerCase();
+    }
+    else
+    {
+      str = array[i][variable];
+    }
+    if(i == array.length - 1)
+    {
+      res = res + str;
+    }
+    else
+    {
+      res = res + str + ' | ';
+    }
+  }
+  return res;
+}
 module.exports = {
 	name: 'berry',
 	args: false,
@@ -19,37 +43,25 @@ module.exports = {
 	usage: `<name>`,
 	execute(message, args) {
     if (!args.length) {
-      msg = 'Here is a list of all the Berries:\n';
-      for(i = 0;i<berries.length;i++)
+      P.getBerriesList()
+      .then(function(berries)
       {
-        if(i == berries.length - 1)
-        {
-          msg += berries[i];
-        }
-        else
-        {
-          msg = msg + berries[i] + ' | ';
-        }
-      }
-      return message.channel.send(msg)
+        msg = 'Here is a list of all the Berries:\n' + makeList(berries.results, 'name');
+        return message.channel.send(msg)
+      })
+      .catch(function(error)
+      {
+        console.log('There was an ERROR: ', error);
+        return message.channel.send('An Error occoured.');
+      });
      }
      else
     {
       args = args[0].toLowerCase();
       P.getBerryByName(args)
       .then(function(berry) {
-        const berryURL = 'https://img.pokemondb.net/sprites/items/' + args + '-berry.png';
-        berryFlavor = '';
-        for(i=0;i<5;i++)
-        {
-          if(i == 4)
-          {
-            berryFlavor += berry.flavors[i].potency
-          }
-          else {
-            berryFlavor = berryFlavor + berry.flavors[i].potency + ' | '
-          }
-        }
+        const berryURL = 'https://img.pokemondb.net/sprites/items/' + berry.name + '-berry.png';
+        berryFlavor = makeList(berry.flavors, 'potency');
         itemEmbed =
         {
           thumbnail:
@@ -93,8 +105,8 @@ module.exports = {
         return message.channel.send('',{embed: itemEmbed});
       })
       .catch(function(error) {
-        return message.channel.send('Berry not found.');
         console.log('There was an ERROR: ', error);
+        return message.channel.send('Berry not found.');
       });
     }
 	},

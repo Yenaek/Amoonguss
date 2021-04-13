@@ -15,6 +15,16 @@ function makeReadable(msg)
   msg = msg.join(' ');
   return msg;
 }
+function isNULL(attribute)
+{
+  if(attribute == null || attribute == 0)
+  {
+    return '-';
+  }
+  else {
+    return makeReadable(attribute.name);
+  }
+}
 module.exports = {
 	name: 'nature',
 	args: false,
@@ -73,42 +83,10 @@ module.exports = {
       P.getNatureByName(args)
       .then(function(nature)
       {
-        var increasedStat = '';
-        if(nature.increased_stat == null)
-        {
-          increasedStat = '-';
-        }
-        else
-        {
-          increasedStat = makeReadable(nature.increased_stat.name);
-        }
-        var decreasedStat = '';
-        if(nature.decreased_stat == null)
-        {
-          decreasedStat = '-';
-        }
-        else
-        {
-          decreasedStat = makeReadable(nature.decreased_stat.name);
-        }
-        var likedFlavor = '';
-        if(nature.likes_flavor == null)
-        {
-          likedFlavor = '-';
-        }
-        else
-        {
-          likedFlavor = makeReadable(nature.likes_flavor.name);
-        }
-        var hatedFlavor = '';
-        if(nature.hates_flavor == null)
-        {
-          hatedFlavor = '-';
-        }
-        else
-        {
-          hatedFlavor = makeReadable(nature.hates_flavor.name);
-        }
+        var increasedStat = isNULL(nature.increased_stat);
+        var decreasedStat = isNULL(nature.decreased_stat);
+        var likedFlavor = isNULL(nature.likes_flavor);
+        var hatedFlavor = isNULL(nature.hates_flavor);
         var natEmbed =
         {
           fields:

@@ -20,6 +20,45 @@ var embedColours = {
     msg = msg.join(' ');
     return msg;
   }
+  function makeList(array, variable1, variable2)
+  {
+    res = '';
+    for(i = 0;i<array.length;i++)
+    {
+      let str;
+      if(variable2 != null)
+      {
+        str = array[i][variable1][variable2];
+      }
+      else
+      {
+        str = array[i][variable1];
+      }
+      if (typeof str === 'string' || str instanceof String)
+      {
+        str = str[0].toUpperCase() + str.slice(1).toLowerCase();
+      }
+      if(i == array.length - 1)
+      {
+        res = res + str;
+      }
+      else
+      {
+        res = res + str + ' | ';
+      }
+    }
+    return res;
+  }
+  function getEnName(nameArray, getName)
+  {
+    for(i=0;i<nameArray.length;i++)
+    {
+      if(nameArray[i].language.name == 'en')
+      {
+        return nameArray[i][getName]
+      }
+    }
+  }
     var Pokedex = require('pokedex-promise-v2');
     var P = new Pokedex();
     module.exports = {
@@ -35,39 +74,12 @@ var embedColours = {
           .then(function(poke) {
             pokeURL='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + poke.id + '.png';
             var color = 'black';
-            var pokeName = '';
             P.getPokemonSpeciesByName(args[0].toLowerCase())
             .then(function(spec) {
               color = spec.color.name;
-              for(j=0;j<spec.names.length;j++)
-              {
-                if(spec.names[j].language.name == 'en')
-                {
-                  pokeName = spec.names[j].name
-                }
-              }
-              pokeStats = '';
-              for(i=0;i<poke.stats.length;i++)
-              {
-                if(i==0)
-                {
-                  pokeStats += poke.stats[i].base_stat
-                }
-                else {
-                  pokeStats = pokeStats + ' | ' +poke.stats[i].base_stat
-                }
-              }
-              pokeType = '';
-              for(i=0;i<poke.types.length;i++)
-              {
-                if(i==0)
-                {
-                  pokeType += poke.types[i].type.name[0].toUpperCase() +　poke.types[i].type.name.slice(1);
-                }
-                else {
-                  pokeType = pokeType + ' | ' + poke.types[i].type.name[0].toUpperCase() +　poke.types[i].type.name.slice(1);
-                }
-              }
+              var pokeName = getEnName(spec.names, 'name');
+              pokeStats = makeList(poke.stats, 'base_stat', null);
+              pokeType = makeList(poke.types, 'type', 'name');
               pokeAbilities = '';
               switch(poke.abilities.length)
               {
