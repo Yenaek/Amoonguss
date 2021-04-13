@@ -1,26 +1,7 @@
 var moveEmbed;
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
-function isNULL(attribute)
-{
-  if(attribute == null || attribute == 0)
-  {
-    return '-';
-  }
-  else {
-    return attribute;
-  }
-}
-function getEnName(nameArray, getName)
-{
-  for(i=0;i<nameArray.length;i++)
-  {
-    if(nameArray[i].language.name == 'en')
-    {
-      return nameArray[i][getName]
-    }
-  }
-}
+var tools = require('.././tools');
 var typeURL = {
     normal:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Pokémon_Normal_Type_Icon.svg/200px-Pokémon_Normal_Type_Icon.svg.png',
     fighting:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Pokémon_Fighting_Type_Icon.svg/200px-Pokémon_Fighting_Type_Icon.svg.png',
@@ -41,25 +22,25 @@ var typeURL = {
     dark:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Pokémon_Dark_Type_Icon.svg/200px-Pokémon_Dark_Type_Icon.svg.png',
     fairy:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Pokémon_Fairy_Type_Icon.svg/200px-Pokémon_Fairy_Type_Icon.svg.png'
 };
-var embedColours = {
-  normal:0xffffff,
-  fighting:0xff4d00,
-  flying:0x438b9d,
-  poison:0x8b3aa1,
-  ground:0xf76c22,
-  rock:0xd08d4e,
-  bug:0x92fe39,
-  ghost:0x4d5ba3,
-  steel:0x84b1eb,
-  fire:0xff7b00,
-  water:0x0088ff,
-  grass:0x1eff00,
-  electric:0xffff00,
-  psychic:0xe86dc1,
-  ice:0x84e6da,
-  dragon:0x4c7090,
-  dark:0x585c5f,
-  dairy:0xdd5fbb
+var typeColors = {
+  normal:0x919aa2,
+  fighting:0xe0306a,
+  flying:0x89aae3,
+  poison:0xb567ce,
+  ground:0xe87236,
+  rock:0xc8b686,
+  bug:0x83c300,
+  ghost:0x4c6ab2,
+  steel:0x5a8ea2,
+  fire:0xff9741,
+  water:0x3692dc,
+  grass:0x38bf4b,
+  electric:0xfbd100,
+  psychic:0xff6675,
+  ice:0x4cd1c0,
+  dragon:0x006fc9,
+  dark:0x5b5466,
+  fairy:0xfb89eb
 };
 module.exports = {
 	name: 'move',
@@ -72,10 +53,10 @@ module.exports = {
         args = args.toLowerCase();
         P.getMoveByName(args)
       .then(function(move) {
-        var movePower = isNULL(move.power);
-        var moveAccuracy = isNULL(move.accuracy);
-        var moveEffectRate = isNULL(move.meta.ailment_chance)
-        moveName = getEnName(move.names, 'name');
+        var movePower = tools.isNull(move.power);
+        var moveAccuracy = tools.isNull(move.accuracy);
+        var moveEffectRate = tools.isNull(move.meta.ailment_chance)
+        moveName = tools.getEnName(move.names, 'name');
         moveDesc = '';
         for(j=0;j<move.flavor_text_entries.length;j++)
         {
@@ -87,7 +68,7 @@ module.exports = {
         moveClass = move.damage_class.name[0].toUpperCase() + move.damage_class.name.slice(1);
         moveEmbed =
         {
-          color: embedColours[move.type.name],
+          color: typeColors[move.type.name],
           thumbnail:
           {
             url:typeURL[move.type.name],

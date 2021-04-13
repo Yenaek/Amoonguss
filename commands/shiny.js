@@ -1,5 +1,6 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
+var tools = require('.././tools');
 module.exports = {
 	name: 'shiny',
 	args: true,
@@ -11,7 +12,7 @@ module.exports = {
     pok = pok.toLowerCase();
     P.getPokemonByName(pok)
         .then(function(poke) {
-          pokeURL='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + poke.id + '.png';
+          pokeURL='https://img.pokemondb.net/sprites/home/shiny/' + tools.fixUrl(poke.name) + '.png';
           var pokeEmbed =
           {
             image:

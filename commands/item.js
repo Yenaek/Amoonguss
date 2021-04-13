@@ -1,30 +1,21 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
-function getEnName(nameArray, getName)
-{
-  for(i=0;i<nameArray.length;i++)
-  {
-    if(nameArray[i].language.name == 'en')
-    {
-      return nameArray[i][getName]
-    }
-  }
-}
+var tools = require('.././tools');
 module.exports = {
-	name: 'item',
-	args: true,
-	description: 'Displays an items information',
-	aliases: ['i'],
-	usage: `<name>`,
-	execute(message, args)
+  name: 'item',
+  args: true,
+  description: 'Displays an items information',
+  aliases: ['i'],
+  usage: `<name>`,
+  execute(message, args)
   {
     args = args.join('-');
     args = args.toLowerCase();
     P.getItemByName(args)
     .then(function(item)
     {
-      const itemURL = 'https://img.pokemondb.net/sprites/items/' + args + '.png';
-      itemName = getEnName(item.names, 'name');
+      const itemURL = 'https://img.pokemondb.net/sprites/items/' + item.name + '.png';
+      itemName = tools.getEnName(item.names, 'name');
       itemCost = item.cost;
       if(item.cost == 0)
       {
@@ -33,7 +24,7 @@ module.exports = {
       else {
         itemCost = '₽' + itemCost;
       }
-      itemEff = getEnName(item.effect_entries, 'short_effect');
+      itemEff = tools.getEnName(item.effect_entries, 'short_effect');
       itemEmbed =
       {
         thumbnail:
@@ -66,5 +57,5 @@ module.exports = {
       return message.channel.send('Item not found.');
       console.log('There was an ERROR: ', error);
     });
-	},
+  },
 };

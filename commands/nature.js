@@ -1,37 +1,18 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
+var tools = require('.././tools');
 attack = ['*Hardy*','Lonely','Adamant','Naughty','Brave'];
 defense = ['Bold','*Docile*','Impish','Lax','Relaxed'];
 spattack = ['Modest','Mild','*Bashful*','Rash','Quiet'];
 spdefense = ['Calm','Gentle','Careful','*Quirky*','Sassy'];
 speed = ['Timid','Hasty','Jolly','Naive','*Serious*'];
-function makeReadable(msg)
-{
-  msg = msg.split('-');
-  for(i=0;i<msg.length;i++)
-  {
-    msg[i] = msg[i][0].toUpperCase() + msg[i].slice(1).toLowerCase();
-  }
-  msg = msg.join(' ');
-  return msg;
-}
-function isNULL(attribute)
-{
-  if(attribute == null || attribute == 0)
-  {
-    return '-';
-  }
-  else {
-    return makeReadable(attribute.name);
-  }
-}
 module.exports = {
-	name: 'nature',
-	args: false,
-	description: 'Shows the information for all Natures or information of a specific one',
-	aliases: ['n'],
-	usage: `<name>`,
-	execute(message, args) {
+  name: 'nature',
+  args: false,
+  description: 'Shows the information for all Natures or information of a specific one',
+  aliases: ['n'],
+  usage: `<name>`,
+  execute(message, args) {
     if (!args.length)
     {
       var natEmbed =
@@ -83,17 +64,17 @@ module.exports = {
       P.getNatureByName(args)
       .then(function(nature)
       {
-        var increasedStat = isNULL(nature.increased_stat);
-        var decreasedStat = isNULL(nature.decreased_stat);
-        var likedFlavor = isNULL(nature.likes_flavor);
-        var hatedFlavor = isNULL(nature.hates_flavor);
+        var increasedStat = tools.isNull(nature.increased_stat, 'name');
+        var decreasedStat = tools.isNull(nature.decreased_stat, 'name');
+        var likedFlavor = tools.isNull(nature.likes_flavor, 'name');
+        var hatedFlavor = tools.isNull(nature.hates_flavor, 'name');
         var natEmbed =
         {
           fields:
           [
             {
               name: 'Name',
-              value: makeReadable(nature.name),
+              value: tools.makeReadable(nature.name),
               inline: false
             },
             {
@@ -136,5 +117,5 @@ module.exports = {
         console.log('There was an ERROR: ', error);
       });
     }
-	},
+  },
 };

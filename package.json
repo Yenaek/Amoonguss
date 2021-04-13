@@ -1,7 +1,7 @@
 {
   "name": "amoonguss",
   "version": "0.0.1",
-  "description": "sus bot",
+  "description": "pokemon information bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,6 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "pokedex-promise-v2": "^3.3.0",
-    "request": "^2.88.2",
-    "requestify": "^0.2.5"
+    "pokedex-promise-v2": "^3.3.0"
   }
 }
