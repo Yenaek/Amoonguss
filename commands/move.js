@@ -1,6 +1,9 @@
 var moveEmbed;
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
+var redis = require('redis');
+const { regis_port } = require('../config.json')
+const client = redis.createClient(regis_port);
 var tools = require('.././tools');
 var typeURL = {
     normal:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Pokémon_Normal_Type_Icon.svg/200px-Pokémon_Normal_Type_Icon.svg.png',
@@ -42,6 +45,69 @@ var typeColors = {
   dark:0x5b5466,
   fairy:0xfb89eb
 };
+function createEmbed(message, move)
+{
+  var movePower = tools.isNull(move.power);
+  var moveAccuracy = tools.isNull(move.accuracy);
+  var moveEffectRate = tools.isNull(move.meta.ailment_chance)
+  moveName = tools.getEnName(move.names, 'name');
+  moveDesc = '';
+  for(j=0;j<move.flavor_text_entries.length;j++)
+  {
+    if(move.flavor_text_entries[j].language.name == 'en' && move.flavor_text_entries[j].version_group.name == 'ultra-sun-ultra-moon')
+    {
+      moveDesc = move.flavor_text_entries[j].flavor_text;
+    }
+  }
+  moveClass = move.damage_class.name[0].toUpperCase() + move.damage_class.name.slice(1);
+  moveEmbed =
+  {
+    color: typeColors[move.type.name],
+    thumbnail:
+    {
+      url:typeURL[move.type.name],
+    },
+    fields:
+    [
+      {
+        name: 'Name',
+        value: moveName,
+        inline: true
+      },
+      {
+        name: 'Description',
+        value: moveDesc,
+        inline: false
+      },
+      {
+        name: 'Power',
+        value: movePower,
+        inline: true
+      },
+      {
+        name: 'Accuracy',
+        value: moveAccuracy,
+        inline:true
+      },
+      {
+        name: 'PP',
+        value: move.pp,
+        inline:true
+      },
+      {
+        name: 'Effect Rate',
+        value: moveEffectRate,
+        inline:true
+      },
+      {
+        name: 'Class',
+        value: moveClass,
+        inline:true
+      }
+    ],
+  }
+  return message.channel.send('',{embed: moveEmbed});
+}
 module.exports = {
 	name: 'move',
 	args: true,
@@ -51,72 +117,24 @@ module.exports = {
 	execute(message, args) {
         args = args.join('-');
         args = args.toLowerCase();
-        P.getMoveByName(args)
-      .then(function(move) {
-        var movePower = tools.isNull(move.power);
-        var moveAccuracy = tools.isNull(move.accuracy);
-        var moveEffectRate = tools.isNull(move.meta.ailment_chance)
-        moveName = tools.getEnName(move.names, 'name');
-        moveDesc = '';
-        for(j=0;j<move.flavor_text_entries.length;j++)
-        {
-          if(move.flavor_text_entries[j].language.name == 'en' && move.flavor_text_entries[j].version_group.name == 'ultra-sun-ultra-moon')
+        client.get('move/'+args, (err,data) => {
+          if (err) throw err;
+          if(data !== null)
           {
-            moveDesc = move.flavor_text_entries[j].flavor_text;
+            createEmbed(message,JSON.parse(data));
           }
-        }
-        moveClass = move.damage_class.name[0].toUpperCase() + move.damage_class.name.slice(1);
-        moveEmbed =
-        {
-          color: typeColors[move.type.name],
-          thumbnail:
-          {
-            url:typeURL[move.type.name],
-          },
-          fields:
-          [
-            {
-              name: 'Name',
-              value: moveName,
-              inline: true
-            },
-            {
-              name: 'Description',
-              value: moveDesc,
-              inline: false
-            },
-            {
-              name: 'Power',
-              value: movePower,
-              inline: true
-            },
-            {
-              name: 'Accuracy',
-              value: moveAccuracy,
-              inline:true
-            },
-            {
-              name: 'PP',
-              value: move.pp,
-              inline:true
-            },
-            {
-              name: 'Effect Rate',
-              value: moveEffectRate,
-              inline:true
-            },
-            {
-              name: 'Class',
-              value: moveClass,
-              inline:true
-            }
-          ],
-        }
-        return message.channel.send('',{embed: moveEmbed});
-      })
-      .catch(function(error) {
-        console.log('There was an ERROR: ', error);
-        return message.channel.send('Move not found.');
-      });
+          else {
+            P.getMoveByName(args)
+            .then(function(move) {
+              console.log(`fetching data for move/${args}`)
+              client.set('move/'+args,JSON.stringify(move));
+              createEmbed(message,move);
+            })
+            .catch(function(error) {
+              console.log('There was an ERROR: ', error);
+              return message.channel.send('Move not found.');
+            });
+          }
+        });
 	},
 };

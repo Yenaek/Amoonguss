@@ -22,7 +22,7 @@ module.exports =
   },
   isNull: function isNull(attribute, var1)
   {
-    if(var1 != null)
+    if(var1 != null && attribute != null)
     {
       attribute = attribute[var1];
     }
