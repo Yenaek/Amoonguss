@@ -1,9 +1,9 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../.././config.json')
 const client = redis.createClient(regis_port);
-var tools = require('.././tools');
+var tools = require('../.././tools');
 function createEmbed(message, item)
 {
   const itemURL = 'https://img.pokemondb.net/sprites/items/' + item.name + '.png';
@@ -61,9 +61,12 @@ module.exports = {
         createEmbed(message,JSON.parse(data));
       }
       else {
+        console.log(`fetching data for item/${args}`);
+        start = new Date();
         P.getItemByName(args)
         .then(function(item) {
-          console.log(`fetching data for item/${args}`)
+          end = new Date();
+          console.log(`done. took ${end - start}ms`);
           client.set('item/'+args,JSON.stringify(item));
           createEmbed(message,item);
         })

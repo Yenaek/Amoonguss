@@ -1,9 +1,9 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../.././config.json')
 const client = redis.createClient(regis_port);
-var tools = require('.././tools');
+var tools = require('../.././tools');
 function createEmbed(message,abil)
 {
   abName = tools.getEnName(abil.names, 'name');
@@ -65,9 +65,12 @@ module.exports = {
         createEmbed(message,JSON.parse(data));
       }
       else {
+        start = new Date();
+        console.log(`fetching data for ability/${args}`)
         P.getAbilityByName(args)
         .then(function(abil) {
-          console.log(`fetching data for ability/${args}`)
+          end = new Date();
+          console.log(`done. took ${end - start}ms`);
           client.set('ability/'+args,JSON.stringify(abil));
           createEmbed(message,abil);
         })

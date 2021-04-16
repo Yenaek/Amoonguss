@@ -1,9 +1,9 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../.././config.json')
 const client = redis.createClient(regis_port);
-var tools = require('.././tools');
+var tools = require('../.././tools');
 function createEmbed(message, pokemon)
 {
 	pokeURL='https://img.pokemondb.net/sprites/home/shiny/' + tools.fixUrl(pokemon.name) + '.png';
@@ -32,9 +32,12 @@ module.exports = {
 				createEmbed(message,JSON.parse(data));
 			}
 			else {
+				console.log(`fetching data for pokemon/${args}`);
+				start = new Date();
 				P.getPokemonByName(args)
 				.then(function(pokemon) {
-					console.log(`fetching data for pokemon/${args}`)
+					end = new Date();
+          console.log(`done. took ${end - start}ms`);
 					client.set('pokemon/'+args,JSON.stringify(pokemon));
 					createEmbed(message,pokemon);
 				})

@@ -1,9 +1,9 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../../config.json')
 const client = redis.createClient(regis_port);
-var tools = require('.././tools');
+var tools = require('../.././tools');
 function createBerryEmbed(message, berry)
 {
   const berryURL = 'https://img.pokemondb.net/sprites/items/' + berry.name + '-berry.png';
@@ -96,9 +96,12 @@ module.exports = {
           createBerryEmbed(message,JSON.parse(data));
         }
         else {
+          console.log(`fetching data for berry/${args}`)
+          start = new Date();
           P.getBerryByName(args)
           .then(function(berry) {
-            console.log(`fetching data for berry/${args}`)
+            end = new Date();
+            console.log(`done. took ${end - start}ms`);
             client.set('berry/'+args,JSON.stringify(berry));
             createBerryEmbed(message,berry);
           })

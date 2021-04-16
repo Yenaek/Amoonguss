@@ -1,9 +1,9 @@
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../.././config.json')
 const client = redis.createClient(regis_port);
-var tools = require('.././tools');
+var tools = require('../.././tools');
 attack = ['*Hardy*','Lonely','Adamant','Naughty','Brave'];
 defense = ['Bold','*Docile*','Impish','Lax','Relaxed'];
 spattack = ['Modest','Mild','*Bashful*','Rash','Quiet'];
@@ -120,9 +120,12 @@ module.exports = {
           createEmbed(message,JSON.parse(data));
         }
         else {
+          console.log(`fetching data for nature/${args}`);
+          start = new Date();
           P.getNatureByName(args)
           .then(function(nature) {
-            console.log(`fetching data for nature/${args}`)
+            end = new Date();
+            console.log(`done. took ${end - start}ms`);
             client.set('nature/'+args,JSON.stringify(nature));
             createEmbed(message,nature);
           })

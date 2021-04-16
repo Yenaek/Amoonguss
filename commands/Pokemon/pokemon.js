@@ -10,11 +10,11 @@ var pokemonColors = {
   white: 0xeeeeee,
   pink: 0xfb89eb
 }
-var tools = require('.././tools');
+var tools = require('../.././tools');
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../.././config.json')
 const client = redis.createClient(regis_port);
 function createEmbed(message, pokemon,args)
 {
@@ -28,9 +28,12 @@ function createEmbed(message, pokemon,args)
       createSpeciesEmbed(message,pokemon,JSON.parse(data));
     }
     else {
+      console.log(`fetching data for pokemon-species/${args[0].toLowerCase()}`);
+      start = new Date();
       P.getPokemonSpeciesByName(args[0].toLowerCase())
       .then(function(species) {
-        console.log(`fetching data for pokemon-species/${args[0].toLowerCase()}`)
+        end = new Date();
+        console.log(`done. took ${end - start}ms`);
         client.set('pokemon-species/'+args[0].toLowerCase(),JSON.stringify(species));
         createSpeciesEmbed(message,pokemon,species);
       })
@@ -127,9 +130,12 @@ module.exports = {
         createEmbed(message,JSON.parse(data),args);
       }
       else {
+        console.log(`fetching data for pokemon/${args}`);
+        start = new Date();
         P.getPokemonByName(args)
         .then(function(pokemon) {
-          console.log(`fetching data for pokemon/${args}`)
+          end = new Date();
+          console.log(`done. took ${end - start}ms`);
           client.set('pokemon/'+args,JSON.stringify(pokemon));
           createEmbed(message,pokemon,args);
         })

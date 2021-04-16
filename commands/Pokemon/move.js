@@ -2,9 +2,9 @@ var moveEmbed;
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 var redis = require('redis');
-const { regis_port } = require('../config.json')
+const { regis_port } = require('../.././config.json')
 const client = redis.createClient(regis_port);
-var tools = require('.././tools');
+var tools = require('../.././tools');
 var typeURL = {
     normal:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Pokémon_Normal_Type_Icon.svg/200px-Pokémon_Normal_Type_Icon.svg.png',
     fighting:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Pokémon_Fighting_Type_Icon.svg/200px-Pokémon_Fighting_Type_Icon.svg.png',
@@ -124,9 +124,12 @@ module.exports = {
             createEmbed(message,JSON.parse(data));
           }
           else {
+            console.log(`fetching data for move/${args}`);
+            start = new Date();
             P.getMoveByName(args)
             .then(function(move) {
-              console.log(`fetching data for move/${args}`)
+              end = new Date();
+              console.log(`done. took ${end - start}ms`);
               client.set('move/'+args,JSON.stringify(move));
               createEmbed(message,move);
             })
