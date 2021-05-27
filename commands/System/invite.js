@@ -5,6 +5,7 @@ module.exports = {
     aliases: [],
     usage: '',
     execute(message, args) {
-        return message.channel.send('https://discord.com/oauth2/authorize?client_id=824034925928906752&scope=bot&permissions=3072');
+        console.log(`executing invite ${args}`);
+        return message.channel.send('https://discord.com/oauth2/authorize?client_id=824034925928906752&scope=bot&permissions=52224');
     },
 }

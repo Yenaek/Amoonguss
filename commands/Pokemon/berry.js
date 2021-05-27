@@ -62,6 +62,7 @@ module.exports = {
   aliases: ['b'],
   usage: `<name>`,
   execute(message, args) {
+    console.log(`executing berry ${args}`);
     if (!args.length) {
       client.get('berries', (err, data) => {
         if(data !== null)

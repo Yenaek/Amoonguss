@@ -23,6 +23,7 @@ module.exports = {
   aliases: ['s'],
 	usage: `<name||number>`,
   execute(message, args) {
+		console.log(`executing shiny ${args}`);
     var args = args.join('-');
     args = args.toLowerCase();
 		client.get('pokemon/'+args, (err,data) => {

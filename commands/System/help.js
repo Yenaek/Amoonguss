@@ -5,6 +5,7 @@ module.exports = {
 	aliases: ['commands','info','h'],
 	usage: `<command name>`,
 	execute(message, args, prefix) {
+		console.log(`executing help ${args}`);
 		const data = [];
 		sus = [];
 		const { commands, folders } = message.client;

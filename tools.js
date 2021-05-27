@@ -75,19 +75,41 @@ module.exports =
     name = name.split('-');
     for(i = 0; i < name.length; i++)
     {
-      if(name[i] == 'gmax')
-      {
-        name[i] = 'gigantamax';
-      }
-      if(name[i] == 'alola')
-      {
-        name[i] = 'alolan';
-      }
-      if(name[i] == 'galar')
-      {
-        name[i] = 'galarian';
+      switch (name[i]) {
+        case 'gmax':
+          name[i] = 'gigantamax'
+          break;
+        case 'alola':
+          name[i] = 'alolan'
+          break;
+        case 'galar':
+          name[i] = 'galarian'
+          break;
+        default:
+
       }
     }
     return name.join('-');
+  },
+  mostRecentInfo: function mostRecentInfo(array, information)
+  {
+    return array[array.length-1][information];
+  },
+  splitFieldList: function splitFieldList(str)
+  {
+    if (!str) {return [];}
+    var output = [];
+    var prevSlice = 0;
+    for (var i = 0; i < Math.floor(str.length/1024); i++) {
+      for (var i = prevSlice + 1024; i > 0; i--) {
+        if (str.charAt(i) == "\n") {
+          output.push(str.slice(prevSlice,prevSlice + i));
+          prevSlice = i + 1;
+          break;
+        }
+      }
+    }
+    output.push(str.slice(prevSlice, str.length))
+    return output;
   }
 }

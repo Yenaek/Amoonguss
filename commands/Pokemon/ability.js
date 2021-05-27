@@ -56,6 +56,7 @@ module.exports = {
   aliases: ['a'],
   usage: `<name>`,
   execute(message, args) {
+    console.log(`executing ability ${args}`);
     var args = args.join('-');
     args = args.toLowerCase();
     client.get('ability/'+args, (err,data) => {

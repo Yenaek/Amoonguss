@@ -7,6 +7,7 @@ module.exports = {
   aliases: [],
   usage: `<prefix>`,
   execute(message, args) {
+    console.log(`executing prefix ${args}`);
     if(!message.guild) return message.reply('You are currently not on a server');
     if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You need to be mod to change the prefix');
     writeData = '';

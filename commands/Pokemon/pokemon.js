@@ -121,6 +121,7 @@ module.exports = {
   aliases: ['p','pokedex','dex'],
   usage: `<name>`,
   execute(message, args) {
+    console.log(`executing pokemon ${args}`);
     var args = args.join('-');
     args = args.toLowerCase();
     client.get('pokemon/'+args, (err,data) => {

@@ -65,6 +65,7 @@ module.exports = {
   aliases: ['n'],
   usage: `<name>`,
   execute(message, args) {
+    console.log(`executing nature ${args}`);
     if (!args.length)
     {
       var natEmbed =

@@ -115,6 +115,7 @@ module.exports = {
   aliases: ['m','attack'],
 	usage: `<name>`,
 	execute(message, args) {
+    console.log(`executing move ${args}`);
         args = args.join('-');
         args = args.toLowerCase();
         client.get('move/'+args, (err,data) => {

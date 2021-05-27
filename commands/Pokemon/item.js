@@ -52,6 +52,7 @@ module.exports = {
   usage: `<name>`,
   execute(message, args)
   {
+    console.log(`executing item ${args}`);
     args = args.join('-');
     args = args.toLowerCase();
     client.get('item/'+args, (err,data) => {
