@@ -117,11 +117,16 @@ function createSpeciesEmbed(message, pokemon, species)
 module.exports = {
   name: 'pokemon',
   args: true,
-  description: 'Displays a Pokemons information',
+  description: 'Displays a Pokemons information.\nCommon affixes:\nalola\ngalar\nmega\ngmax',
   aliases: ['p','pokedex','dex'],
   usage: `<name>`,
   execute(message, args) {
     console.log(`executing pokemon ${args}`);
+    const mistype = tools.commonDatabaseError(args[0].toLowerCase())
+    if(mistype[0] && !args[1])
+    {
+      return message.channel.send(tools.generateMultipleFormMessage(args[0].toLowerCase(), mistype))
+    }
     var args = args.join('-');
     args = args.toLowerCase();
     client.get('pokemon/'+args, (err,data) => {

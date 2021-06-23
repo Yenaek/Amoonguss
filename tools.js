@@ -111,5 +111,74 @@ module.exports =
     }
     output.push(str.slice(prevSlice, str.length))
     return output;
+  },
+  commonDatabaseError: function commonDatabaseError(name)
+  {
+    switch (name) {
+      case 'nidoran':
+        return ['m', 'f']
+      case 'deoxys':
+        return ['normal', 'attack', 'defense', 'speed']
+      case 'wormadam':
+        return ['plant', 'sandy', 'trash']
+      case 'giratina':
+        return ['altered', 'origin']
+      case 'shaymin':
+        return ['land', 'sky']
+      case 'basculin':
+        return ['red-striped', 'blue-striped']
+      case 'darmanitan':
+        return ['standard', 'zen']
+      case 'tornadus':
+        return ['incarnate', 'therian']
+      case 'thunderus':
+        return ['incarnate' , 'therian']
+      case 'landorus':
+        return ['incarnate', 'therian']
+      case 'keldeo':
+        return ['ordinary', 'resolute']
+      case 'meloetta':
+        return ['aria', 'pirouette']
+      case 'meowstic':
+        return ['male', 'female']
+      case 'aegislash':
+        return ['shield', 'blade']
+      case 'pumpkaboo':
+        return ['small', 'average', 'large', 'super']
+      case 'gourgeist':
+        return ['small', 'average', 'large', 'super']
+      case 'oricorio':
+        return ['baile', 'pom-pom', 'pau', 'sensu']
+      case 'lyncanroc':
+        return ['midday', 'midnight', 'dusk']
+      case 'wishiwashi':
+        return ['solo', 'school']
+      case 'minior':
+        return ['minior-red-meteor', 'minior-orange-meteor', 'minior-yellow-meteor', 'minior-green-meteor', 'minior-blue-meteor', 'minior-indigo-meteor', 'minior-violet-meteor', 'minior-red', 'minior-orange', 'minior-yellow', 'minior-green', 'minior-blue', 'minior-indigo', 'minior-violet']
+      case 'mimikyu':
+        return ['diguised', 'busted']
+      case 'toxtricity':
+        return ['amped', 'low-key']
+      case 'eiscue':
+        return ['ice', 'noice']
+      case 'indeedee':
+        return ['male', 'female']
+      case 'zacian':
+        return ['hero', 'crowned']
+      case 'zamazenta':
+        return ['hero', 'crowned']
+      case 'urshifu':
+        return ['single-strike', 'rapid-strike']
+      default:
+        return []
+    }
+  },
+  generateMultipleFormMessage: function generateMultipleFormMessage(name, mistype)
+  {
+    var output = ''
+    for (var i = 0; i < mistype.length; i++) {
+      output = output + name + '-' + mistype[i] + '\n'
+    }
+    return `this pokemon has multiple forms:\n${output}`
   }
 }

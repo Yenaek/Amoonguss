@@ -24,6 +24,11 @@ module.exports = {
 	usage: `<name||number>`,
   execute(message, args) {
 		console.log(`executing shiny ${args}`);
+		const mistype = tools.commonDatabaseError(args[0].toLowerCase())
+    if(mistype[0] && !args[1])
+    {
+      return message.channel.send(tools.generateMultipleFormMessage(args[0].toLowerCase(), mistype))
+    }
     var args = args.join('-');
     args = args.toLowerCase();
 		client.get('pokemon/'+args, (err,data) => {
